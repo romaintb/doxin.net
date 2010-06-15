@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>doxin.net :: [% FOREACH path IN paths %]/[% path %][% END %]</title>
+	<link type="text/css" rel="stylesheet" href="http://doxin.net/style.css" />
+	<link rel="shortcut icon" href="http://doxin.net/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+<p><br /></p>
+<table id="main">
+	<tr>
+
+		<td id="menu" valign="top">
+			<h1 class="nomargintop">ro.<span>site</span></h1>
+				<a href="http://doxin.net">index</a><br />
+				<a href="http://doxin.net/a_propos.html">&agrave; propos</a><br />
+				<a href="http://doxin.net/contact.html">contact</a><br />
+				<a href="http://blog.doxin.net">blog</a><br />
+				<a href="http://git.doxin.net">cgit</a>
+
+			<h1>ro.<span>nav</span></h1>
+				[% FOREACH link IN links %]
+					[% IF !link.match('^index.html$') AND ( link.match('.html$') OR link.match('/$') ) %]
+				<a href="[% link %]"[% "class=\"directory\"" IF link.match('/$') %]>[% link.replace('_', ' ').replace('.html$', '') %]</a><br />
+					[% END %]
+				[% END %]
+		</td>
+		<td id="content">
+			<a href="/">doxin.net</a>
+			[% SET fullpath = '' %]
+			[% FOREACH path IN paths %]
+			[% SET fullpath = fullpath _ '/' _ path %]
+			/ <a href="[% fullpath %]">[% path.replace('_', ' ') %]</a>
+			[% END %]
+			<br />
+
+			Derni&egrave;re g&eacute;n&eacute;ration : [% mtime %]
+			<br /><br />
+
+			[% content %]
+
+		</td>
+	</tr>
+</table>
+<p><br /></p>
+
+</body>
+</html>
+
