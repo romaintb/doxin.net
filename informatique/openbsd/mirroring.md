@@ -1,21 +1,24 @@
-<h1>mirroring</h1>
+# mirroring
 
-Puisque ca devient lassant de graver des CD pour faire les mises à jours de -current, la facon la plus simple reste le <i>bsd.rd</i>, avec un ftp/http local (ce qui évite de télécharger 4 ou 5 fois les sets, surtout quand on a comme moi une connexion lamentable et plusieurs machines.)
-
-
-
-<h2>http</h2>
-
-todo
+Puisque ca devient lassant de graver des CD pour faire les mises à jours de
+-current, la facon la plus simple reste le _bsd.rd_, avec un ftp/http
+local (ce qui évite de télécharger 4 ou 5 fois les sets, surtout quand on a
+comme moi une connexion lamentable et plusieurs machines.)
 
 
 
-<h2>ftp</h2>
+## http
 
 todo
 
 
 
-<h2>ftp-proxy</h2>
+## ftp
+
+todo
+
+
+
+## ftp-proxy
 
 todo

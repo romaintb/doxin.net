@@ -1,12 +1,14 @@
-<h1>à porter</h1>
+# à porter
 
-Une petite liste des choses que j'aimerais bien porter, si j'étais moins feignant, et plus compétent :<br />
-* Ardour<br />
-* Qtractor<br />
-* Qjackctl<br />
-* gnofract4d<br />
-* agave (gfx)<br />
-* mixxx (soft dj)<br />
-* ario (client mpd)<br />
-* qwit (client twitter en qt)<br />
-* mpdscribble (lastfm + mpd)
+Une petite liste des choses que j'aimerais bien porter, si j'étais moins
+feignant, et plus compétent :
+
+- Ardour
+- Qtractor
+- Qjackctl
+- gnofract4d
+- agave (gfx)
+- mixxx (soft dj)
+- ario (client mpd)
+- qwit (client twitter en qt)
+- mpdscribble (lastfm + mpd)
