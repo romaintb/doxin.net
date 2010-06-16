@@ -14,8 +14,8 @@ bien entendu à comparer mes dires avec d'autres sources.
 - [Soldano SP-77](Soldano_SP-77.html)
 - [Engl 570](Engl_570.html)
 - [Baffle NOS 4x12 Celestion vintage 30](NOS_4x12_v30.html)
-- [Baffle Behringer BG412S]Behringer_BG412S.html)
-- [Guitare Schecter Hellraiser 7cordes](Schecter_Hellraiser_C7.html">
+- [Baffle Behringer BG412S](Behringer_BG412S.html)
+- [Guitare Schecter Hellraiser 7cordes](Schecter_Hellraiser_C7.html)
   (+ Micro [Seymour Duncan SH8](Seymour_Duncan_SH8.html))
 - [Behringer V-amp2](Behringer_V-amp2.html)
 - T.Racks Power suplly
