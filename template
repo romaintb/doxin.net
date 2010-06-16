@@ -19,7 +19,7 @@
 				<a href="http://doxin.net/a_propos.html">&agrave; propos</a><br />
 				<a href="http://doxin.net/contact.html">contact</a><br />
 				<a href="http://blog.doxin.net">blog</a><br />
-				<a href="http://git.doxin.net">cgit</a>
+				<a href="http://github.com/romaintb">github</a>
 
 			<h1>ro.<span>nav</span></h1>
 				[% FOREACH link IN links %]
