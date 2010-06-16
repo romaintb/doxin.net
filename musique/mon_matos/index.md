@@ -36,7 +36,7 @@ bien entendu à comparer mes dires avec d'autres sources.
 
 - 2x [Synq X.TRM.1](Synq_X.TRM.1.html)
 - [Numark M2](Numark_M2.html)
-- [Native Instruments Audio 4 DJ](Native_Instruments_Audio_4_DJ.html)
+- [Native Instruments Audio 4 DJ](NI_Audio_4_DJ.html)
 - 2x [Vinyl Serato Scratch Live](Vinyl_Serato_Scratch_Live.html)
 - Casque Thomann [T.Bone TDJ1000](T.Bone_TDJ1000.html)
 
