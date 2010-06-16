@@ -38,7 +38,7 @@
 			<br />
 
 			Derni&egrave;re g&eacute;n&eacute;ration : [% mtime %]
-			<br /><br />
+			<br />
 
 			[% content %]
 
