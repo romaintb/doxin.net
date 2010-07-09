@@ -20,7 +20,6 @@ informatique libre, musique, culture, écolo, philo ...
 
 # Bijoux d'esprit
 
-[Gonzai](http://gonzai.com)  
 [La rubrique necro](http://la-rubrique-necro.blogspot.com)  
 
 Ouais, la boite à bijoux est pas bien grande ...
