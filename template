@@ -24,8 +24,7 @@
 				<a href="[% link %]"[% "class=\"directory\"" IF link.match('/$') %]>[% link.replace('_', ' ').replace('.html$', '') %]</a><br />[% END %][% END %]
 		</td>
 		<td id="content">
-			<a href="/">doxin.net</a>
-[% SET fullpath = '' %][% FOREACH path IN paths %][% SET fullpath = fullpath _ '/' _ path %]/ <a href="[% fullpath %]">[% path.replace('_', ' ') %]</a>[% END %]
+			<a href="/">doxin.net</a>[% SET fullpath = '' %][% FOREACH path IN paths %][% SET fullpath = fullpath _ '/' _ path %]/ <a href="[% fullpath %]">[% path.replace('_', ' ') %]</a>[% END %]
 			<br />
 
 			Derni&egrave;re g&eacute;n&eacute;ration : [% mtime %]
