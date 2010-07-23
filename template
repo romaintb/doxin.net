@@ -12,7 +12,6 @@
 <p><br /></p>
 <table id="main">
 	<tr>
-
 		<td id="menu" valign="top">
 			<h1 class="nomargintop">ro.<span>site</span></h1>
 				<a href="http://doxin.net">index</a><br />
@@ -21,26 +20,18 @@
 				<a href="http://blog.doxin.net">blog</a><br />
 				<a href="http://github.com/romaintb">github</a>
 
-			<h1>ro.<span>nav</span></h1>
-				[% FOREACH link IN links %]
-					[% IF !link.match('^index.html$') AND ( link.match('.html$') OR link.match('/$') ) %]
-				<a href="[% link %]"[% "class=\"directory\"" IF link.match('/$') %]>[% link.replace('_', ' ').replace('.html$', '') %]</a><br />
-					[% END %]
-				[% END %]
+			<h1>ro.<span>nav</span></h1>[% FOREACH link IN links %][% IF !link.match('^index.html$') AND ( link.match('.html$') OR link.match('/$') ) %]
+				<a href="[% link %]"[% "class=\"directory\"" IF link.match('/$') %]>[% link.replace('_', ' ').replace('.html$', '') %]</a><br />[% END %][% END %]
 		</td>
 		<td id="content">
 			<a href="/">doxin.net</a>
-			[% SET fullpath = '' %]
-			[% FOREACH path IN paths %]
-			[% SET fullpath = fullpath _ '/' _ path %]
-			/ <a href="[% fullpath %]">[% path.replace('_', ' ') %]</a>
-			[% END %]
+[% SET fullpath = '' %][% FOREACH path IN paths %][% SET fullpath = fullpath _ '/' _ path %]/ <a href="[% fullpath %]">[% path.replace('_', ' ') %]</a>[% END %]
 			<br />
 
 			Derni&egrave;re g&eacute;n&eacute;ration : [% mtime %]
 			<br />
 
-			[% content %]
+[% content %]
 
 		</td>
 	</tr>
