@@ -42,7 +42,7 @@ on y `ln_-s notrescript.pl`.
 
 
 
-## configuration
+## configuration
 
 Rien de bien sorcier ici, simplement, comme on a le plugin _nickcolor_, les
 hilights ne resortent pas bien. On peut remédier à cà en hilightant la ligne
