@@ -34,7 +34,7 @@ Du libre, du libre, du libre !
 [OpenBSD](http://www.openbsd.org)  
 [Undeadly](http://undeadly.org)  
 [GCU](http://gcu.info)  
-[dwm](www.suckless.org/dwm/)  
+[dwm](http://www.suckless.org/dwm/)  
 [nvi](http://fr.wikipedia.org/wiki/Nvi) /
 	[vim](http://www.vim.org) /
 	[vimperator](http://vimperator.mozdev.org)  
