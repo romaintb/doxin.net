@@ -1,0 +1,23 @@
+[blog]
+  lang = fr_FR
+  posts = 10
+  style = default.css
+  subtitle = with no useless subtitle
+  theme = default.html
+  title = ro's blog
+  url = http://doxin.net/blog
+[color]
+  list = true
+  log = true
+[core]
+  editor = vim
+  encoding = UTF-8
+  extension = html
+  processor = markdown --html4tags %in% > %out%
+[post]
+  author = top
+  date = top
+  tags = top
+[user]
+  email = romain@doxin.net
+  name = ro
