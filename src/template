@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>doxin.net :: [% FOREACH path IN paths %]/[% path %][% END %]</title>
-	<link type="text/css" rel="stylesheet" href="http://doxin.net/style.css" />
-	<link rel="shortcut icon" href="http://doxin.net/favicon.ico" type="image/x-icon" />
+	<link type="text/css" rel="stylesheet" href="http://doxin.net/site/style.css" />
+	<link rel="shortcut icon" href="http://doxin.net/site/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
@@ -14,18 +14,16 @@
 	<tr>
 		<td id="menu" valign="top">
 			<h1 class="nomargintop">ro.<span>site</span></h1>
-				<a href="http://doxin.net">index</a><br />
-				<a href="http://doxin.net/a_propos.html">&agrave; propos</a><br />
-				<a href="http://doxin.net/contact.html">contact</a><br />
-				<a href="http://doxin.net/blog">tech blog</a><br />
-				<a href="http://blog.doxin.net">blog</a><br />
+				<a href="http://doxin.net/site/">index</a><br />
+				<a href="http://doxin.net/site/a_propos.html">&agrave; propos</a><br />
+				<a href="http://doxin.net/site/contact.html">contact</a><br />
 				<a href="http://github.com/romaintb">github</a>
 
 			<h1>ro.<span>nav</span></h1>[% FOREACH link IN links %][% IF !link.match('^index.html$') AND ( link.match('.html$') OR link.match('/$') ) %]
 				<a href="[% link %]"[% "class=\"directory\"" IF link.match('/$') %]>[% link.replace('_', ' ').replace('.html$', '') %]</a><br />[% END %][% END %]
 		</td>
 		<td id="content">
-			<a href="/">doxin.net</a>[% SET fullpath = '' %][% FOREACH path IN paths %][% SET fullpath = fullpath _ '/' _ path %] / <a href="[% fullpath %]">[% path.replace('_', ' ') %]</a>[% END %]
+			<a href="/site">doxin.net/site</a>[% SET fullpath = '' %][% FOREACH path IN paths %][% SET fullpath = fullpath _ '/' _ path %] / <a href="[% fullpath %]">[% path.replace('_', ' ') %]</a>[% END %]
 			<br />
 
 			Derni&egrave;re g&eacute;n&eacute;ration : [% mtime %]
