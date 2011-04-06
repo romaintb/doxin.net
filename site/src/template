@@ -5,7 +5,7 @@
 <head>
 	<title>doxin.net :: [% FOREACH path IN paths %]/[% path %][% END %]</title>
 	<link type="text/css" rel="stylesheet" href="http://doxin.net/site/style.css" />
-	<link rel="shortcut icon" href="http://doxin.net/site/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://doxin.net/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
