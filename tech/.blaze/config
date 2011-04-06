@@ -1,0 +1,23 @@
+[blog]
+  lang = en_GB
+  posts = 10
+  style = default.css
+  subtitle = yet another geeky blog
+  theme = default.html
+  title = ro's tech blog
+  url = http://doxin.net/tech/
+[color]
+  list = false
+  log = false
+[core]
+  editor = vim
+  encoding = UTF-8
+  extension = html
+  processor = markdown --html4tags %in% > %out%
+[post]
+  author = top
+  date = top
+  tags = top
+[user]
+  email = romain@doxin.net
+  name = ro

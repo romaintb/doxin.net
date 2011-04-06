@@ -1,0 +1,43 @@
+<p>I had to setup MySQL replication at work for a HA-like architecture. I hit my
+head open for several days and thought it might be worth a blog post, since it
+is actually pretty simple, even though reading billions of mysql documentation
+did not help. So here it is, assuming that your master is already running,
+with proper config (that is easy, so I won't insult your intelligence by
+writing about it) :</p>
+
+<ol>
+<li><p>If a slave process is running on your slave mysql, stop it :</p>
+
+<p><code>(slave)mysql> STOP SLAVE;</code></p></li>
+<li><p>Dump all the data from master :</p>
+
+<p><code>romain@master $ mysqldump -u root -p --all-databases --master-data > dump.sql</code></p>
+
+<p>Don't mess with the options, if you try to add other ones, there are chances
+that they will fuck up the two that are really required, and nothing will
+work. (I lost a lot of time because of that)</p></li>
+<li><p>Run the CHANGE MASTER TO <strong>before</strong> injecting the dump. Changing master after
+the dump will erase master informations written in the dump, and it will
+just never work.</p>
+
+<p><code>(slave)mysql> CHANGE MASTER TO MASTER_HOST ='master.mydomain.com', MASTER_USER = 'replication', MASTER_PASSWORD = 'p4s5woRd';</code></p></li>
+<li><p>Inject the dump on the slave :</p>
+
+<p><code>(slave)mysql> source ~/dump.sql</code></p></li>
+<li><p>Make some coffee if your dump is a bit large.</p></li>
+<li><p>If you synchronized the <em>mysql</em> table (that's what I did), you can flush
+privileges and restart mysql. I don't know if that is mandatory, though
+it can't hurt.</p></li>
+<li><p>Start the slave process :</p>
+
+<p><code>(slave)mysql> START SLAVE;</code></p></li>
+<li><p>Look for errors :</p>
+
+<p><code>(slave)mysql> SHOW SLAVE STATUS\G</code></p></li>
+<li><p>Throw yourself out of the window if it still does not work.</p></li>
+</ol>
+
+<p>And that is it. I managed to replicate a production mysql server, with no
+downtime. The process took me about 10 minutes because we had more than
+a gigabyte of data. I hope this is way clearer than what you will found
+on the interweb.</p>

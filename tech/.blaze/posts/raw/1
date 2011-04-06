@@ -1,0 +1,52 @@
+
+I had to setup MySQL replication at work for a HA-like architecture. I hit my
+head open for several days and thought it might be worth a blog post, since it
+is actually pretty simple, even though reading billions of mysql documentation
+did not help. So here it is, assuming that your master is already running,
+with proper config (that is easy, so I won't insult your intelligence by
+writing about it) :
+
+
+1. If a slave process is running on your slave mysql, stop it :
+
+   <code>(slave)mysql> STOP SLAVE;</code>
+
+2. Dump all the data from master :
+
+   <code>romain@master $ mysqldump -u root -p --all-databases --master-data > dump.sql</code>
+
+   Don't mess with the options, if you try to add other ones, there are chances
+   that they will fuck up the two that are really required, and nothing will
+   work. (I lost a lot of time because of that)
+
+3. Run the CHANGE MASTER TO **before** injecting the dump. Changing master after
+   the dump will erase master informations written in the dump, and it will
+   just never work.
+
+   <code>(slave)mysql> CHANGE MASTER TO MASTER\_HOST ='master.mydomain.com', MASTER\_USER = 'replication', MASTER\_PASSWORD = 'p4s5woRd';</code>
+
+4. Inject the dump on the slave :
+
+   <code>(slave)mysql> source ~/dump.sql</code>
+
+5. Make some coffee if your dump is a bit large.
+
+6. If you synchronized the _mysql_ table (that's what I did), you can flush
+   privileges and restart mysql. I don't know if that is mandatory, though
+   it can't hurt.
+
+7. Start the slave process :
+
+   <code>(slave)mysql> START SLAVE;</code>
+
+8. Look for errors :
+
+   <code>(slave)mysql> SHOW SLAVE STATUS\G</code>
+
+9. Throw yourself out of the window if it still does not work.
+
+
+And that is it. I managed to replicate a production mysql server, with no
+downtime. The process took me about 10 minutes because we had more than
+a gigabyte of data. I hope this is way clearer than what you will found
+on the interweb.
