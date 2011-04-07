@@ -29,8 +29,7 @@
     </div>
 
     <div id="content">
-        Derni&egrave;re g&eacute;n&eacute;ration : [% mtime %]
-        <br />
+        <div class="section">Derni&egrave;re g&eacute;n&eacute;ration : [% mtime %]</div>
         [% content %]
     </div>
 
