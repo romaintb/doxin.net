@@ -1,41 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-	<title>doxin.net :: [% FOREACH path IN paths %]/[% path %][% END %]</title>
-	<link type="text/css" rel="stylesheet" href="http://doxin.net/site/style.css" />
-	<link rel="shortcut icon" href="http://doxin.net/favicon.ico" type="image/x-icon" />
+    <title>doxin.net/site :: [% FOREACH path IN paths %]/[% path %][% END %]</title>
+    <link type="text/css" rel="stylesheet" href="http://doxin.net/site/default.css" />
+    <link rel="shortcut icon" href="http://doxin.net/favicon.ico" type="image/x-icon" />
 </head>
+
 <body>
+    <div id="wrapper">
+        <div id="shadow">
+            <div id="heading">
+                <h1><a href="http://doxin.net/site">ro's site</a></h1>
+                welcome ~
+            </div>
 
-<p><br /></p>
-<table id="main">
-	<tr>
-		<td id="menu" valign="top">
-			<h1 class="nomargintop">ro.<span>site</span></h1>
-				<a href="http://doxin.net/site/">index</a><br />
-				<a href="http://doxin.net/site/a_propos.html">&agrave; propos</a><br />
-				<a href="http://doxin.net/site/contact.html">contact</a><br />
-				<a href="http://github.com/romaintb">github</a>
+        <div id="menu">
+            <ul>
+                <li class="global" id="selected"><a href="http://doxin.net/site">Site</a></li>
+                <li class="global"><a href="http://doxin.net/blog">Blog</a></li>
+                <li class="global"><a href="http://doxin.net/tech">Tech blog</a></li>
+                <li></li>
+                <li><a href="/site">doxin.net/site</a></li>
+                [% SET fullpath = '/site/' %][% FOREACH path IN paths %][% SET fullpath = fullpath _ '/' _ path %]<li>/ <a href="[% fullpath %]">[% path.replace('_', ' ') %]</a></li>[% END %]
+            </ul>
+        </div>
+    </div>
 
-			<h1>ro.<span>nav</span></h1>[% FOREACH link IN links %][% IF !link.match('^index.html$') AND ( link.match('.html$') OR link.match('/$') ) %]
-				<a href="[% link %]"[% "class=\"directory\"" IF link.match('/$') %]>[% link.replace('_', ' ').replace('.html$', '') %]</a><br />[% END %][% END %]
-		</td>
-		<td id="content">
-			<a href="/site">doxin.net/site</a>[% SET fullpath = '' %][% FOREACH path IN paths %][% SET fullpath = fullpath _ '/' _ path %] / <a href="[% fullpath %]">[% path.replace('_', ' ') %]</a>[% END %]
-			<br />
+    <div id="content">
+        Derni&egrave;re g&eacute;n&eacute;ration : [% mtime %]
+        <br />
+        [% content %]
+    </div>
 
-			Derni&egrave;re g&eacute;n&eacute;ration : [% mtime %]
-			<br />
+    <div id="sidebar">
+        <h2>Site</h2>
+            <ul>
+                <li><a href="http://doxin.net/site/">index</a></li>
+                <li><a href="http://doxin.net/site/a_propos.html">&agrave; propos</a></li>
+                <li><a href="http://doxin.net/site/contact.html">contact</a></li>
+                <li><a href="http://github.com/romaintb">github</a></li>
+            </ul>
 
-[% content %]
+        <h2>Navigation</h2>
+            <ul>
+                [% FOREACH link IN links %][% IF !link.match('^index.html$') AND ( link.match('.html$') OR link.match('/$') ) %]
+                <li><a href="[% link %]"[% "class=\"directory\"" IF link.match('/$') %]>[% link.replace('_', ' ').replace('.html$', '') %]</a></li>[% END %][% END %]
+            </ul>
+    </div>
 
-		</td>
-	</tr>
-</table>
-<p><br /></p>
+  <div id="footer">
+    Powered by <a href="https://github.com/romaintb/doxite">doxite</a>.
+  </div>
+</div>
 
 </body>
 </html>
-
