@@ -38,7 +38,7 @@ On place ses scripts dans _~/.irssi/scripts_, on tape _/script_load_nomduscript_
 pour le charger ou _/script_unload_nomduscript_ pour le décharger. Dur non ?  
 Petite subtilité, si on veut que notre script soit chargé automatiquement au
 démarrage d'irssi, on créé un répertoire _autorun_ dans _~/.irssi/scripts_ et
-on y `ln_-s notrescript.pl`.
+on y `ln -s notrescript.pl`.
 
 
 
