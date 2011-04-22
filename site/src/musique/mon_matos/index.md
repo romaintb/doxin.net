@@ -10,16 +10,12 @@ bien entendu à comparer mes dires avec d'autres sources.
 
 ## Actuel :
 
-- [VHT/Fryette 2/50/2 Black Beauty](Fryette_2502_bb.html)
-- [Soldano SP-77](Soldano_SP-77.html)
-- [Engl 570](Engl_570.html)
-- [Baffle NOS 4x12 Celestion vintage 30](NOS_4x12_v30.html)
-- [Baffle Behringer BG412S](Behringer_BG412S.html)
-- [Guitare Schecter Hellraiser 7cordes](Schecter_Hellraiser_C7.html)
-  (+ Micro [Seymour Duncan SH8](Seymour_Duncan_SH8.html))
-- [Behringer V-amp2](Behringer_V-amp2.html)
+- VHT/Fryette 2/50/2 Black Beauty
+- Baffle NOS 4x12 Celestion vintage 30
+- Baffle Behringer BG412S
+- Guitare Schecter Hellraiser 7cordes
+- Guitare Gibson Studio
 - T.Racks Power suplly
-- Harley Benton Powerplant
 - Rack thomann (référence)
 
 
@@ -27,6 +23,10 @@ bien entendu à comparer mes dires avec d'autres sources.
 ## Passé :
 
 - [Engl Powerball](Engl_Powerball.html)
+- Soldano SP-77
+- Engl 570
+- Behringer V-amp2
+- Harley Benton Powerplant
 
 
 
