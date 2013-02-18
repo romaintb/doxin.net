@@ -2,7 +2,7 @@
 HOMEDIR=`pwd`
 
 echo "Deploying home ..."
-cd home && cp index.html default.css favicon.ico /var/www/doxin.net
+cd home && cp index.html default.css favicon.ico /home/romain/www/doxin.net
 cd $HOMEDIR
 echo "Done."
 
